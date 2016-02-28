@@ -230,6 +230,7 @@ var simpleStore = {
     init: function (options) {
         if ($.isPlainObject(options)) {
             return this.extend(this.settings, options, function () {
+            	//initialization
             	simpleStore.settings.paginate ? $.when(simpleStore.generateStore()).then(paginate()) : simpleStore.generateStore();
             });
         }
