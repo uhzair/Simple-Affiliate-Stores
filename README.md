@@ -1,6 +1,6 @@
 # Simple Affiliate Stores
 
-Simple Affiliate Stores is a clean, responsive storefront boilerplate with no database you can setup in minutes. Simple Affiliate Stores is built on top of [simpleStores](https://github.com/cdmedia/simplestore) which uses Skeleton CSS Framework for a lightweight, fast, simple to use, and completely customizable experience.
+Simple Affiliate Stores is a clean, responsive storefront boilerplate with no database you can setup in minutes. Simple Affiliate Stores is built on top of [simpleStore](https://github.com/cdmedia/simplestore) which uses Skeleton CSS Framework for a lightweight, fast, simple to use, and completely customizable experience.
 
 # Features
 
@@ -11,7 +11,7 @@ Simple Affiliate Stores is a clean, responsive storefront boilerplate with no da
 
 # Demos
 
-You can see a working demo [here](http://chlist.github.io/simple-affiliate-stores/)
+You can see a working demo [here](http://chlist.github.io/Simple-Affiliate-Stores/)
 
 
 # Setup
@@ -46,3 +46,4 @@ framework/plugin pages.
 * [Normalize.css](http://necolas.github.io/normalize.css)
 * [FontAwesome](http://fortawesome.github.io/Font-Awesome)
 * [jQuery](https://jquery.com/)
+* [jPages](https://github.com/luis-almeida/jPages)
