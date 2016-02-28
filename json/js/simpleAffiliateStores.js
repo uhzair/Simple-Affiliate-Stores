@@ -6,6 +6,7 @@ var simpleStore = {
     // Default settings
     settings: {
         mode: "JSON",
+        fadeSpeed: 200,
         buttonColor: null,
         backgroundColor: null,
         textColor: null,
@@ -106,7 +107,7 @@ var simpleStore = {
 					$('.' + s.rowClass + rowCount).append($tmpl);
 				}
             });
-            if(simpleStore.settings.paginate){
+            if(s.settings.paginate){
             	paginate();
             }
     },
