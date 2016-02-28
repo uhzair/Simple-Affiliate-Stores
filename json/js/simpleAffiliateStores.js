@@ -107,7 +107,7 @@ var simpleStore = {
 					$('.' + s.rowClass + rowCount).append($tmpl);
 				}
             });
-            if(s.settings.paginate){
+            if(simpleStore.settings.paginate){
             	paginate();
             }
     },
