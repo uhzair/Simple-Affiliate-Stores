@@ -12,15 +12,13 @@ $(function() {
 });
 //Pagination function
 function paginate(){
-	setTimeout(function(){
-		$("div.holder").jPages({
-		    containerID : "simpleStore_container",
-		    // change this to how much rows of products you want per page. setting this to n means you get n*numColumns(above) products per page.
-		    perPage : 3,
-		    // change these if you want previous and next buttons in pagination controls.
-		    previous : false,
-		    next : false
-		    // for more pagination settings see http://luis-almeida.github.io/jPages/
-		});
-	}, 500);    
+	$("div.holder").jPages({
+	    containerID : "simpleStore_container",
+	    // change this to how much rows of products you want per page. setting this to n means you get n*numColumns(above) products per page.
+	    perPage : 3,
+	    // change these if you want previous and next buttons in pagination controls.
+	    previous : false,
+	    next : false
+	    // for more pagination settings see http://luis-almeida.github.io/jPages/
+	});
 };
