@@ -1,0 +1,17 @@
+html{
+	background: #ECECEC;
+	box-shadow: inset 0 0 1em #A5A5A1;
+	height: 100%;
+	font-family: monospace;
+}
+body{
+	padding: 1em;
+}
+h1{
+	 	font-weight: 100;
+}
+a{
+    font-size: large;
+    text-decoration: none;
+    font-weight: 600;
+}
