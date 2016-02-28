@@ -5,16 +5,11 @@ var simpleStore = {
 
     // Default settings
     settings: {
-        numColumns: 3,
-        brand: "Simple Affiliate Stores",
         mode: "JSON",
-        JSONFile: "products.json",
-        fadeSpeed: 200,
         buttonColor: null,
         backgroundColor: null,
         textColor: null,
         container: $('.simpleStore_container'),
-        cartContainer: $('.simpleStore_cart_container'),
         rowClass: 'simpleStore_row_',
         columnWidthClasses: {
             1: "",
@@ -70,9 +65,6 @@ var simpleStore = {
             numRows = Math.ceil(products.length / s.numColumns),
             itemWidth;
 
-        s.cartContainer.hide();
-        s.container.fadeOut(s.fadeSpeed, function () {
-
             // Empty out main container on load
             s.container.html('').fadeIn(s.fadeSpeed);
 
@@ -114,7 +106,6 @@ var simpleStore = {
 					$('.' + s.rowClass + rowCount).append($tmpl);
 				}
             });
-        });
     },
 
     renderError: function (s, msg) {
@@ -231,7 +222,11 @@ var simpleStore = {
         if ($.isPlainObject(options)) {
             return this.extend(this.settings, options, function () {
             	//initialization
-            	$.when(simpleStore.generateStore()).then(paginate());
+            	if (simpleStore.settings.paginate){
+            		$.when(simpleStore.generateStore()).then(paginate());
+            	}else{
+            		simpleStore.generateStore();
+            	}
             });
         }
     }
