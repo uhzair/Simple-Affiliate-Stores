@@ -106,6 +106,9 @@ var simpleStore = {
 					$('.' + s.rowClass + rowCount).append($tmpl);
 				}
             });
+            if(simpleStore.settings.paginate){
+            	paginate();
+            }
     },
 
     renderError: function (s, msg) {
@@ -222,11 +225,7 @@ var simpleStore = {
         if ($.isPlainObject(options)) {
             return this.extend(this.settings, options, function () {
             	//initialization
-            	if (simpleStore.settings.paginate){
-            		$.when(simpleStore.generateStore()).then(paginate());
-            	}else{
-            		simpleStore.generateStore();
-            	}
+    		simpleStore.generateStore();
             });
         }
     }
