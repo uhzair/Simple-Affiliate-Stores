@@ -13,14 +13,16 @@ Simple Affiliate Stores is a clean, responsive storefront boilerplate with no da
 
 You can see a working demo [here](http://chlist.github.io/Simple-Affiliate-Stores/)
 
-
 # Setup
 
-1.Make sure simple affiliates store is on a web server (any type will do as long as it can serve static web pages).
+* Make sure simple affiliates store is on a web server (any type will do as long as it can serve static web pages).
+* Edit the `js/config.js` to your liking.
 
-2.Edit the `js/config.js` to your liking.
+# Using JSON version
 
-3.Add additional products in the `products.json` file.
+* Use the products.json file as a starting point.
+* Add additional products in the `products.json` file.
+* Make sure mode is set to `JSON` in `js/config.js` and that `googleSheets.js` is not being referenced in the setup.
 
 # Using Google Spreadsheet
 
@@ -30,11 +32,11 @@ To use a Google Spreadsheet, add a reference just before your `config.js` file
 <script src="js/googleSheets.js"></script>
 ```
 
-* 1. Use the [Demo Spreadsheet](https://docs.google.com/spreadsheets/d/1iFqESLXyV8gVS5WCrrUFl6c35VT_nk6OZ_zxb0HO7Ew/edit?usp=sharing) as a starting point
-* 2. Create a new Google spreadsheet
-* 3. Set sharing permissions to either “Public” or set to “Anyone with link can view”
-* 4. Publish the sheet (File -> Publish to the web -> Publish)
-* 5. Add the spreadsheet ID to your 'config.js' ( spreadsheetID : "XXXXXXXXXXXXXXXXXXXXXXX" )
+* Use the [Demo Spreadsheet](https://docs.google.com/spreadsheets/d/1iFqESLXyV8gVS5WCrrUFl6c35VT_nk6OZ_zxb0HO7Ew/edit?usp=sharing) as a starting point
+* Create a new Google spreadsheet
+* Set sharing permissions to either “Public” or set to “Anyone with link can view”
+* Publish the sheet (File -> Publish to the web -> Publish)
+* Add the spreadsheet ID to your 'config.js' ( spreadsheetID : "XXXXXXXXXXXXXXXXXXXXXXX" )
 
 ## Credit where credit is due
 
