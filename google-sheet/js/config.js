@@ -7,13 +7,13 @@ $(function() {
 		// google sheets id
 		spreadsheetID : "1iFqESLXyV8gVS5WCrrUFl6c35VT_nk6OZ_zxb0HO7Ew",
 		// set to true if you want pages; false if you want infinite scroll
-		paginate : false
+		paginate : false,
 		//Google forms settings (For suggest an item feature)
-		formID : "1uoRS0OQeXIzf380_MUASZIEvZct0wDov3cqQFY36t7k"
-		itemName : "entry.1789872256"
-		itemPrice : "entry.1082362107"
-		itemImg : "entry.1872074530"
-		itemURL : "entry.1622892934"
+		formID : "1uoRS0OQeXIzf380_MUASZIEvZct0wDov3cqQFY36t7k",
+		itemName : "entry.1789872256",
+		itemPrice : "entry.1082362107",
+		itemImg : "entry.1872074530",
+		itemURL : "entry.1622892934",
 		itemDesc : "entry.333465733"
 		
 	});
