@@ -9,7 +9,7 @@ $(function() {
 		// set to true if you want pages; false if you want infinite scroll
 		paginate : false,
 		//Google forms id
-		formID : "1uoRS0OQeXIzf380_MUASZIEvZct0wDov3cqQFY36t7k",
+		formID : "1uoRS0OQeXIzf380_MUASZIEvZct0wDov3cqQFY36t7k"
 	});
 	
 });
