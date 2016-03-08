@@ -7,7 +7,7 @@ $(function() {
 		// google sheets id
 		spreadsheetID : "1iFqESLXyV8gVS5WCrrUFl6c35VT_nk6OZ_zxb0HO7Ew",
 		// set to true if you want pages; false if you want infinite scroll
-		paginate : false,
+		paginate : true,
 		//Google forms id
 		formID : "1uoRS0OQeXIzf380_MUASZIEvZct0wDov3cqQFY36t7k"
 	});
