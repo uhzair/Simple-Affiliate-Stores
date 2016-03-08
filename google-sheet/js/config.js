@@ -41,11 +41,11 @@ var desc = $('#desc').val();
     $.ajax({
         url: `https://docs.google.com/forms/d/${simpleStore.formID}/formResponse`,
         data: {
-        	simpleStore.itemName : name,
-        	simpleStore.itemPrice : price, 
-        	simpleStore.itemimg : img, 
-        	simpleStore.itemURL : url,
-        	simpleStore.itemDesc : desc
+        	simpleStore.settings.itemName : name,
+        	simpleStore.settings.itemPrice : price, 
+        	simpleStore.settings.itemimg : img, 
+        	simpleStore.settings.itemURL : url,
+        	simpleStore.settings.itemDesc : desc
         },
         type: "POST",
         dataType: "xml",
