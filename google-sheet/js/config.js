@@ -39,7 +39,7 @@ var url = $('#url').val();
 var desc = $('#desc').val();
 
     $.ajax({
-        url: `https://docs.google.com/forms/d/${simpleStore.formID}/formResponse`,
+        url: `https://docs.google.com/forms/d/${simpleStore.settings.formID}/formResponse`,
         data: {
         	simpleStore.settings.itemName : name,
         	simpleStore.settings.itemPrice : price, 
