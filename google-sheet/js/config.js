@@ -33,7 +33,7 @@ var url = $('#url').val();
 var desc = $('#desc').val();
 
     $.ajax({
-        url: `https://docs.google.com/forms/d/${simpleStore.settings.formID}/formResponse`,
+        url: `http://docs.google.com/forms/d/${simpleStore.settings.formID}/formResponse`,
         data: {
         	"entry.1789872256" : name,
         	"entry.1082362107" : price, 
@@ -42,7 +42,6 @@ var desc = $('#desc').val();
         	"entry.333465733" : desc
         },
         type: "POST",
-        crossOrigin: true,
         dataType: "xml",
         statusCode: {
             0: function () {
