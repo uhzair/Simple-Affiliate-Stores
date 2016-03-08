@@ -41,6 +41,9 @@ var simpleStore = {
             // Main view
             '': function () {
                 simpleStore.renderProducts(simpleStore.products, s);
+            },
+            '#suggest': function () {
+                simpleStore.renderForm(s);
             }
         };
 
@@ -58,7 +61,11 @@ var simpleStore = {
         tmpl.find('.prodURL').attr('href', product.href);
         tmpl.find('.item_desc').text(product.desc);
     },
-
+    renderForm: function(s){
+	s.container.html('').fadeIn(s.fadeSpeed);
+	$('.holder').html('');
+	s.container.html($('#form-template').html());
+    },
     renderProducts: function (products, s) {
 
         var rowCount = 1,
