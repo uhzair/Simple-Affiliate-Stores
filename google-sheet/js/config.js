@@ -7,9 +7,7 @@ $(function() {
 		// google sheets id
 		spreadsheetID : "1iFqESLXyV8gVS5WCrrUFl6c35VT_nk6OZ_zxb0HO7Ew",
 		// set to true if you want pages; false if you want infinite scroll
-		paginate : true,
-		//Google forms id
-		formID : "1uoRS0OQeXIzf380_MUASZIEvZct0wDov3cqQFY36t7k"
+		paginate : true
 	});
 	
 });
@@ -25,31 +23,3 @@ function paginate(){
 		// for more pagination settings see http://luis-almeida.github.io/jPages/
     	});
 };
-function postContactToGoogle() {
-var name = $('#name').val();
-var price = $('#price').val();
-var img = $('#img').val();
-var url = $('#url').val();
-var desc = $('#desc').val();
-
-    $.ajax({
-        url: `http://docs.google.com/forms/d/${simpleStore.settings.formID}/formResponse`,
-        data: {
-        	"entry.1789872256" : name,
-        	"entry.1082362107" : price, 
-        	"entry.1872074530" : img, 
-        	"entry.1622892934" : url,
-        	"entry.333465733" : desc
-        },
-        type: "POST",
-        dataType: "xml",
-        statusCode: {
-            0: function () {
-                window.location = '';
-            },
-            200: function () {
-                window.location = '';
-            }
-        }
-    });
-}
