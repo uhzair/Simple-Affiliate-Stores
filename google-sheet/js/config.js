@@ -42,6 +42,7 @@ var desc = $('#desc').val();
         	"entry.333465733" : desc
         },
         type: "POST",
+        crossOrigin: true,
         dataType: "xml",
         statusCode: {
             0: function () {
