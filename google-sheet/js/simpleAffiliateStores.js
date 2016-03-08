@@ -42,7 +42,7 @@ var simpleStore = {
                 simpleStore.renderProducts(simpleStore.products, s);
             },
             '#suggest': function () {
-                simpleStore.renderForm();
+                simpleStore.renderForm(s);
             }
         };
 
@@ -61,7 +61,7 @@ var simpleStore = {
         tmpl.find('.item_desc').text(product.desc);
     },
     
-    renderForm: function(){
+    renderForm: function(s){
 	s.container.html('').fadeIn(s.fadeSpeed);
 	s.container.html($('#form-template').html());
     },
