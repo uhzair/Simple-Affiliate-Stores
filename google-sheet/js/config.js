@@ -8,14 +8,8 @@ $(function() {
 		spreadsheetID : "1iFqESLXyV8gVS5WCrrUFl6c35VT_nk6OZ_zxb0HO7Ew",
 		// set to true if you want pages; false if you want infinite scroll
 		paginate : false,
-		//Google forms settings (For suggest an item feature)
+		//Google forms id
 		formID : "1uoRS0OQeXIzf380_MUASZIEvZct0wDov3cqQFY36t7k",
-		itemName : "entry.1789872256",
-		itemPrice : "entry.1082362107",
-		itemImg : "entry.1872074530",
-		itemURL : "entry.1622892934",
-		itemDesc : "entry.333465733"
-		
 	});
 	
 });
@@ -41,11 +35,11 @@ var desc = $('#desc').val();
     $.ajax({
         url: `https://docs.google.com/forms/d/${simpleStore.settings.formID}/formResponse`,
         data: {
-        	simpleStore.settings.itemName : name,
-        	simpleStore.settings.itemPrice : price, 
-        	simpleStore.settings.itemimg : img, 
-        	simpleStore.settings.itemURL : url,
-        	simpleStore.settings.itemDesc : desc
+        	"entry.1789872256" : name,
+        	"entry.1082362107" : price, 
+        	"entry.1872074530" : img, 
+        	"entry.1622892934" : url,
+        	"entry.333465733" : desc
         },
         type: "POST",
         dataType: "xml",
