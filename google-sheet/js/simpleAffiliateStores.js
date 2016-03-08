@@ -63,6 +63,7 @@ var simpleStore = {
     
     renderForm: function(s){
 	s.container.html('').fadeIn(s.fadeSpeed);
+	$('.holder').html('');
 	s.container.html($('#form-template').html());
     },
     
