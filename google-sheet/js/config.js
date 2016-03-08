@@ -8,7 +8,16 @@ $(function() {
 		spreadsheetID : "1iFqESLXyV8gVS5WCrrUFl6c35VT_nk6OZ_zxb0HO7Ew",
 		// set to true if you want pages; false if you want infinite scroll
 		paginate : false
+		//Google forms settings (For suggest an item feature)
+		formID : "1uoRS0OQeXIzf380_MUASZIEvZct0wDov3cqQFY36t7k"
+		itemName : "entry.1789872256"
+		itemPrice : "entry.1082362107"
+		itemImg : "entry.1872074530"
+		itemURL : "entry.1622892934"
+		itemDesc : "entry.333465733"
+		
 	});
+	
 });
 //Pagination function
 function paginate(){
@@ -22,3 +31,31 @@ function paginate(){
 		// for more pagination settings see http://luis-almeida.github.io/jPages/
     	});
 };
+function postContactToGoogle() {
+var name = $('#name').val();
+var price = $('#price').val();
+var img = $('#img').val();
+var url = $('#url').val();
+var desc = $('#desc').val();
+
+    $.ajax({
+        url: `https://docs.google.com/forms/d/${simpleStore.formID}/formResponse`,
+        data: {
+        	simpleStore.itemName : name,
+        	simpleStore.itemPrice : price, 
+        	simpleStore.itemimg : img, 
+        	simpleStore.itemURL : url,
+        	simpleStore.itemDesc : desc
+        },
+        type: "POST",
+        dataType: "xml",
+        statusCode: {
+            0: function () {
+                window.location = '';
+            },
+            200: function () {
+                window.location = '';
+            }
+        }
+    });
+}
