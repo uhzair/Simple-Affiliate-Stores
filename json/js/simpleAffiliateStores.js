@@ -5,16 +5,12 @@ var simpleStore = {
 
     // Default settings
     settings: {
-        numColumns: 3,
-        brand: "Simple Affiliate Stores",
         mode: "JSON",
-        JSONFile: "products.json",
         fadeSpeed: 200,
         buttonColor: null,
         backgroundColor: null,
         textColor: null,
         container: $('.simpleStore_container'),
-        cartContainer: $('.simpleStore_cart_container'),
         rowClass: 'simpleStore_row_',
         columnWidthClasses: {
             1: "",
@@ -45,6 +41,9 @@ var simpleStore = {
             // Main view
             '': function () {
                 simpleStore.renderProducts(simpleStore.products, s);
+            },
+            '#suggest': function () {
+                simpleStore.renderForm(s);
             }
         };
 
@@ -62,16 +61,17 @@ var simpleStore = {
         tmpl.find('.prodURL').attr('href', product.href);
         tmpl.find('.item_desc').text(product.desc);
     },
-
+    renderForm: function(s){
+	s.container.html('').fadeIn(s.fadeSpeed);
+	$('.holder').html('');
+	s.container.html($('#form-template').html());
+    },
     renderProducts: function (products, s) {
 
         var rowCount = 1,
             numProducts = products.length,
             numRows = Math.ceil(products.length / s.numColumns),
             itemWidth;
-
-        s.cartContainer.hide();
-        s.container.fadeOut(s.fadeSpeed, function () {
 
             // Empty out main container on load
             s.container.html('').fadeIn(s.fadeSpeed);
@@ -114,7 +114,9 @@ var simpleStore = {
 					$('.' + s.rowClass + rowCount).append($tmpl);
 				}
             });
-        });
+            if(simpleStore.settings.paginate){
+            	paginate();
+            }
     },
 
     renderError: function (s, msg) {
@@ -230,7 +232,8 @@ var simpleStore = {
     init: function (options) {
         if ($.isPlainObject(options)) {
             return this.extend(this.settings, options, function () {
-                $.when(simpleStore.generateStore()).then(paginate());
+            	//initialization
+    		simpleStore.generateStore();
             });
         }
     }
