@@ -65,7 +65,7 @@ var simpleStore = {
 	s.container.html('').fadeIn(s.fadeSpeed);
 	$('.holder').html('');
 	s.container.html($('#form-template').html());
-	$('#suggestionForm').attr("src",s.suggestionFormURL)
+	$('#suggestionForm').attr("src", s.suggestionFormURL + '?embedded=true')
     },
     renderProducts: function (products, s) {
 
