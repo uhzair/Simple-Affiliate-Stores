@@ -27,8 +27,9 @@ You can see a working demo [here](http://chlist.github.io/Simple-Affiliate-Store
 * Next go to the responses tab an click the [spreadsheet icon](http://i.imgur.com/jBkWO4J.png)
 * It'll create a new spreadsheet for you similar to [this one](https://docs.google.com/spreadsheets/d/13jv-OL_J84_OWfNEGNGAUhybtDI8M-La_q12cZU4Xzk/)
 * This spreadsheet will contain all suggestions from users, If you want to add any you can just copy and paste it into your products spreadsheet.
-* Once all setup is done, click on send and open the [iframe tab](http://i.imgur.com/ljnBDS3.png)
-* From here grab the src or the link and modify line 84 in index.html file; replacing the src value to your form src.
+* Once all setup is done, click on send and open the [Link Tab](http://i.imgur.com/6WtAxvM.png)
+* From here grab the src or the link.
+* edit `js/config.js` and set the `suggestionFormURL` value to your form URL
 * You're done =)
 
 
