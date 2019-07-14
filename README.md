@@ -12,7 +12,7 @@ Simple Affiliate Stores is a clean, responsive storefront boilerplate with no da
 
 # Demos
 
-You can see a working demo [here](http://itsuzair.github.io/Simple-Affiliate-Stores/)
+You can see a working demo [here](http://uhzair.github.io/Simple-Affiliate-Stores/)
 
 # Setup
 
